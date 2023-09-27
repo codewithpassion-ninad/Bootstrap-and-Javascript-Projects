@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task 7</title>
+    <style>
+        #container
+        {
+            padding-top: 5%;
+            padding-left: 15%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #animate {
+            position: relative;
+            background-image: url('train.png');
+            background-size: contain;
+            top: 0;
+            left: 0;
+            transition: left 2s linear;
+        }
+
+        #buttons
+        {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <div id="container">
+            <img id="animate" src="./animation-img.png" alt="animation-img">
+        </div>
+    </div>
+
+    <br />
+
+    <p style="color: blue; font-size: 2rem; font-weight: bolder; text-align: center;">Click the following buttons to handle animation</p>
+    <div id="buttons">
+        <button onclick="startAnimation()">Start</button>
+        <button onclick="stopAnimation()">Stop</button>
+    </div>
+
+    <script>
+        let animationInterval;
+
+        function startAnimation()
+        {
+            const elem = document.getElementById("animate");
+            elem.style.left = "0";
+
+            clearInterval(animationInterval);
+            animationInterval = setInterval(function ()
+            {
+                const currentLeft = parseFloat(elem.style.left) || 0;
+                if (currentLeft >= 750)
+                {
+                    clearInterval(animationInterval);
+                }
+                else
+                {
+                    elem.style.left = (currentLeft + 1) + "px";
+                }
+            }, 10);
+        }
+
+        function stopAnimation()
+        {
+            clearInterval(animationInterval);
+        }
+    </script>
+</body>
+
+</html>

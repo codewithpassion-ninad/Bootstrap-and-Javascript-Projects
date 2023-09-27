@@ -1,0 +1,94 @@
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-color {
+    background-color: whitesmoke;
+    width: 60%;
+    padding-left: 15%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+    width: 150%;
+}
+
+.form-label {
+    margin-bottom: 5px;
+}
+
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    position: relative;
+    
+}
+
+.input-with-icon .form-control {
+    border: 2px solid red;
+    border-radius: 5px;
+    padding-right: 30px;
+}
+
+
+.clear-input {
+    cursor: pointer;
+    margin-left: auto;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.clear-input i {
+    color: red;
+}
+
+.form-control-textarea {
+    resize: vertical; 
+    min-height: 100px; 
+    padding-right: 30px;
+}
+
+.clear-input i {
+    font-size: 18px;
+}
+
+.send-button {
+    color: white;
+    background-color: rgb(210, 205, 40);
+    width: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn i {
+    margin-right: 10px;
+}
+
+.input-with-icon input:not(:placeholder-shown) ~ .clear-input {
+    display: block;
+}
+
+.red-text {
+    color: red;
+}
+
+.input-with-icon {
+    position: relative;
+}
+
+.input-with-icon .clear-input {
+    position: absolute;
+    display: inline;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}

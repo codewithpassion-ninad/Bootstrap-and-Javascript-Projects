@@ -1,0 +1,40 @@
+#form-section label
+{
+	display: inline-block;
+	width: 100px;
+	text-align: right;
+}
+
+#submit
+{
+	padding-left: 100px;
+}
+
+#form-section div
+{
+	margin-top: 1em;
+}
+
+.textarea{
+	vertical-align: top;
+	height: 5em;
+}
+
+.input-box
+{
+    border: 2px solid red;
+}
+.display-msg
+{
+	color: red;
+	margin-left: 10px;
+}
+
+#form-section input.invalid, #form-section textarea.invalid
+{
+	border: 2px solid red;
+}
+
+#form section input.valid, #form-section textarea.valid{
+	border: 2px solid green;
+}

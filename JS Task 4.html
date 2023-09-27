@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JS Task 4</title>
+        <style>
+            body {
+                text-align: center;
+                padding: 20px;
+            }
+
+            button {
+                padding: 10px;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <button id="showDate">Show Date</button>
+        <br />
+        <p id="dateResult"></p>
+        <br />
+        <button id="showTime">Show Time</button>
+        <p id="timeResult"></p>
+
+        <script>
+                function showDate()
+                {
+                    const currentDate = new Date();
+                    const day = currentDate.getDate();
+                    const month = currentDate.toLocaleString('default', { month: 'long' });
+                    const year = currentDate.getFullYear();
+                    const formattedDate = `${day} / ${month} / ${year}`;
+                    document.getElementById('dateResult').textContent = `Date: ${formattedDate}`;
+                }
+
+            function showTime()
+            {
+                const currentDate = new Date();
+                const options =
+                {
+                    weekday: 'short',
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric',
+                    hour: 'numeric',
+                    minute: 'numeric',
+                    second: 'numeric',
+                    timeZoneName: 'short'
+                };
+                const formattedTime = currentDate.toLocaleString('en-US', options);
+                document.getElementById('timeResult').textContent = `Time: ${formattedTime} (Indian Standard Time)`;
+            }
+
+            document.getElementById('showDate').addEventListener('click', showDate);
+            document.getElementById('showTime').addEventListener('click', showTime);
+        </script>
+    </body>
+</html>

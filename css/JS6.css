@@ -1,0 +1,32 @@
+.center-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.insta-font
+{
+    align-items: center;
+    font-family:'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.login-button
+{
+    width: 100%;
+}
+
+.remember
+{
+    margin-top: 10%;
+}
+
+.box {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
